@@ -1,0 +1,1320 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>aux-oauth_server.service</name>
+    </assembly>
+    <members>
+        <member name="T:aux_oauth_server.service.ConfigureServiceCollection">
+            <summary>
+            Configure service 
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.ConfigureServiceCollection.AddApplicationService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Application service configuration
+            </summary>
+            <param name="service"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.ConfigureServiceCollection.GetService``1(System.IServiceProvider,System.String,System.Boolean)">
+            <summary>
+            Get service configuration
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="provider"></param>
+            <param name="identifier"></param>
+            <param name="exertName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.ConfigureServiceCollection.CheckService(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serviceName"></param>
+            <param name="compareName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.DbHelper">
+            <summary>
+            Connects to the db
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Entities.ProviderEntity">
+            <summary>
+            Provider entity
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.Issuer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.AuthorizationEndpoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.DeviceAuthorizationEndpoint">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.TokenEndpoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.UserinfoEndpoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.RevocationEndpoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.JwksUri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.ScopesSupported">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.ClaimsSupported">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.GrantTypesSupported">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.ClientId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.ClientSecret">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.ProviderEntity.RedirectUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity">
+            <summary>
+            Token and refresh entity
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity.RefreshToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity.Provider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity.Email">
+             <summary>
+             Email address of the user
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity.DateCreated">
+            <summary>
+            Date the refesh token was created
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity.DateUpdated">
+            <summary>
+            Date updated
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore">
+            <summary>
+            Dapper abstraction
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore.GetDbconnection">
+            <summary>
+            Get db connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore.Get``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            Get a table object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore.GetAll``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            /
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore.Execute(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore.Insert``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore.Update``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore">
+            <summary>
+            Dapper core 
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.Dispose">
+            <summary>
+            Connection 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.Execute(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.Get``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            Get object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.GetAll``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.GetDbconnection">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.Insert``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.core.DapperCore.Update``1(System.String,Dapper.DynamicParameters,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sp"></param>
+            <param name="parms"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Repositories.IProviderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.IProviderRepository.GetProviderByClientId(System.String)">
+            <summary>
+            Get provider by client id
+            </summary>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.IProviderRepository.GetProviderById(System.String)">
+            <summary>
+            Get provider by provider id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.IProviderRepository.GetProviderByName(System.String)">
+            <summary>
+            Get provider by name
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.IProviderRepository.GetProviders(System.Nullable{System.Boolean})">
+            <summary>
+            Get all the registered providers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Repositories.ProviderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.ProviderRepository.#ctor(aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Default provider repository constructor
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.ProviderRepository.GetDbconnection">
+            <summary>
+            Connection 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.ProviderRepository.GetProviders(System.Nullable{System.Boolean})">
+            <summary>
+            Get list of providers
+            </summary>
+            <param name="isActive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.ProviderRepository.GetProviderByName(System.String)">
+            <summary>
+            Get provider by name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.ProviderRepository.GetProviderById(System.String)">
+            <summary>
+            Get provider by id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.ProviderRepository.GetProviderByClientId(System.String)">
+            <summary>
+            Get provider by client id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Repositories.IRefreshTokenRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.IRefreshTokenRepository.GetRefreshTokenByEmail(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.IRefreshTokenRepository.GetRefreshTokenByToken(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="refreshToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.#ctor(aux_oauth_server.service.DataAccess.Repositories.core.IDapperCore,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Default provider repository constructor
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.GetDbconnection">
+            <summary>
+            Connection 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.GetRefreshTokenByEmail(System.String)">
+            <summary>
+            Get refresh token by email
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.GetRefreshTokenByTokenAndProvider(System.String,System.String)">
+            <summary>
+            Get refresh token by email and provider
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.GetRefreshTokenByEmailAndProvider(System.String,System.String)">
+            <summary>
+            Get refresh token entity using email and issuer
+            </summary>
+            <param name="email"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.GetRefreshTokenByToken(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="refreshToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.InsertRefreshToken(aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity)">
+            <summary>
+            Insert refresh token
+            </summary>
+            <param name="refreshToken">Entity</param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.DataAccess.Repositories.RefreshTokenRepository.UpdateRefreshToken(aux_oauth_server.service.DataAccess.Entities.TokenRefreshEntity)">
+            <summary>
+            Insert refresh token
+            </summary>
+            <param name="refreshToken">Entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Extensions.ApplicationBuilderExtensions">
+            <summary>
+            Configure extension
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Extensions.ApplicationBuilderExtensions.UseConfigureSecurityHeaders(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            configure security header for application
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Extensions.ApplicationBuilderExtensions.ApplicationSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)">
+            <summary>
+            Configure 
+            </summary>
+            <param name="app"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Extensions.ApplicationExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Extensions.ApplicationExtensions.ParseEnum``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.ServiceCollectionExtensions">
+            <summary>
+            Common service configuration for service projects
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.ServiceCollectionExtensions.AddApplicationApiConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Helps with api configuration like making url lowercase, date formating, model state validation 
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.ServiceCollectionExtensions.AddSwaggerDoc(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.String,System.String,System.String)">
+            <summary>
+            Configure swaager for api project
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <param name="version">Version</param>
+            <param name="title">Documentation Title</param>
+            <param name="description">Documentation description</param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.ServiceCollectionExtensions.AddApplicationHealthCheck(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.String)">
+            <summary>
+            Health check service configuration
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <param name="name">Service name for health recognition</param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Filters.EnumSchemaFilter">
+            <summary>
+            Enum filter for swagger
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Filters.EnumSchemaFilter.Apply(Microsoft.OpenApi.Models.OpenApiSchema,Swashbuckle.AspNetCore.SwaggerGen.SchemaFilterContext)">
+            <summary>
+            Caller action for the enum filter
+            </summary>
+            <param name="model"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:aux_oauth_server.service.Filters.ValidateModelStateActionFilter">
+            <summary>
+            Validation error filter
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Filters.ValidateModelStateActionFilter.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Managers.Models.ProviderRequests">
+            <summary>
+            Request for requesting access token
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Managers.Models.StandardSuccessProviderResponses">
+            <summary>
+            Standard idp 
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardSuccessProviderResponses.access_token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardSuccessProviderResponses.token_type">
+            <summary>
+            The audience of the token.
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardSuccessProviderResponses.refresh_token">
+            <summary>
+            An opaque refresh token. This is returned if the offline_access scope is granted
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardSuccessProviderResponses.expires_in">
+            <summary>
+            The expiration time of the access token in seconds.
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardSuccessProviderResponses.id_token">
+            <summary>
+            An ID token. This is returned if the openid scope is granted.
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardSuccessProviderResponses.scope">
+            <summary>
+            The scopes contained in the access token.
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Managers.Models.StandardErrorProviderResponses">
+            <summary>
+            Standard error response
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardErrorProviderResponses.error">
+            <summary>
+            Error key
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Managers.Models.StandardErrorProviderResponses.error_description">
+            <summary>
+            Error desciption
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Managers.ProviderClients.GoogleIdentityProviderClient">
+            <summary>
+            Google identity provider client manager, helps with getting access token from google token endpoint
+            WellKnown Configuration - https://accounts.google.com/.well-known/openid-configuration
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Managers.ProviderClients.GoogleIdentityProviderClient.#ctor(Microsoft.Extensions.Logging.ILogger{aux_oauth_server.service.Managers.ProviderClients.GoogleIdentityProviderClient})">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Managers.ProviderClients.GoogleIdentityProviderClient.GetAccessTokenAsync(aux_oauth_server.service.DataAccess.Entities.ProviderEntity,System.String,System.String)">
+            <summary>
+            Get google access token from Google IDP
+            </summary>
+            <param name="entity"></param>
+            <param name="code"></param>
+            <param name="redirectUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Managers.IProviderManager">
+            <summary>
+            Interfce for the provider clients
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Managers.IProviderManager.GetAccessTokenAsync(aux_oauth_server.service.DataAccess.Entities.ProviderEntity,System.String,System.String)">
+            <summary>
+            /
+            </summary>
+            <param name="entity"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Managers.ProviderManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Managers.ProviderManager.#ctor(Microsoft.Extensions.Logging.ILogger{aux_oauth_server.service.Managers.ProviderManager},System.IServiceProvider,aux_oauth_server.service.DataAccess.Repositories.IProviderRepository)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:aux_oauth_server.service.Managers.ProviderManager.GetAccessTokenFromProviderAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get access token from provider by name
+            </summary>
+            <param name="name"></param>
+            <param name="code"></param>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Managers.ProviderManager.GetAccessTokenFromProviderUsingRFAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get access token from provider by name
+            </summary>
+            <param name="name"></param>
+            <param name="code"></param>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Models.AppSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.Secret">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.Issuer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.Audience">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.ValidateIssuer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.ValidateLifetime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.ValidateIssuerSigningKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.ValidateAudience">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Models.AppSettings.Scheme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Models.Constants">
+            <summary>
+            Constant for application
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Models.Constants.SUCCESS_RESPONSE_CODE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Models.Constants.SERVICE_NOT_AVAILABLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Models.Constants.UNAUTHORIZED_ERROR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.ProviderErrorResponse">
+            <summary>
+            Standa
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.ProviderResponse">
+            <summary>
+            Configured oauth Identity Provider(idp) in the system 
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.Id">
+            <summary>
+            Id of the idp in the system
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.Logo">
+            <summary>
+            Logo
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.ClientId">
+            <summary>
+            /ClientId
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.RedirectUrl">
+            <summary>
+            Redirect Url
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.Scope">
+            <summary>
+            Scope for the access token like openid, profile, email, address, phone, offline_access etc
+            Note: for refresh token you must add offline_access
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.GrantTypeAllowed">
+            <summary>
+            Grant type to use
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.ClientGrantUrls">
+            <summary>
+            Url for provider's grant type
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderResponse.Secret">
+            <summary>
+            Client secret
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.GrantType">
+            <summary>
+            Grant type allowed by the idp
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.GrantType.authorization_code">
+            <summary>
+            Authorization code
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.GrantType.implicit_flow">
+            <summary>
+            Implicit Flow
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.GrantType.client_credential_flow">
+            <summary>
+            Client credential flow
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.GrantType.refresh_token">
+            <summary>
+            Client credential flow
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.ClientGrantUrl">
+            <summary>
+            The usl for the provider grant type
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ClientGrantUrl.GrantType">
+            <summary>
+            Grant type for the provier url
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ClientGrantUrl.Url">
+            <summary>
+            Url for the provider grant type
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.ProviderTokenResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderTokenResponse.AccessToken">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderTokenResponse.IdToken">
+            <summary>
+            An ID token. This is returned if the openid scope is granted.
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderTokenResponse.TokenType">
+            <summary>
+            The audience of the token.
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderTokenResponse.ExpiresIn">
+            <summary>
+            The expiration time of the access token in seconds.
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderTokenResponse.Scope">
+            <summary>
+            The scopes contained in the access token.
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.ProviderTokenResponse.RefreshToken">
+            <summary>
+            An opaque refresh token. This is returned if the offline_access scope is granted
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.ResultType">
+            <summary>
+            Response result type
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.ResultType.Success">
+            <summary>
+            Success
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.ResultType.Error">
+            <summary>
+            Error 500 --- 5--n
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.ResultType.ValidationError">
+            <summary>
+            400
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.ResultType.Warning">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.ResultType.NotFound">
+            <summary>
+            404
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.Responses.ResultType.Empty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.Response`1">
+            <summary>
+            Base service response object
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response`1.HasResult">
+            <summary>
+            Indicates if the response contains a result
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response`1.ResponseData">
+            <summary>
+            The result of the response
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response`1.Success(`0)">
+            <summary>
+            Creates a successful response with a given result object
+            </summary>
+            <param name="result">The result object to return with the response</param>
+            <returns>The response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response`1.Failed(System.String)">
+            <summary>
+            Creates a failed result. It takes no result object
+            </summary>
+            <param name="errorMessage">The error message returned with the response</param>
+            <returns>The created response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response`1.NotFound(System.String)">
+            <summary>
+            Creates a failed result for not found error. It takes no result object
+            </summary>
+            <param name="errorMessage">The error message returned with the response</param>
+            <returns>The created response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response`1.ValidationError(System.Collections.Generic.List{System.String})">
+            <summary>
+            Creates a validation error response, indicating the input was invalid
+            </summary>
+            <param name="validationMessages">The validation message</param>
+            <returns>The Response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response`1.Warning(System.String,`0)">
+            <summary>
+            Creates a warning result. The warning result is successful, but might have issues that should be addressed or logged
+            </summary>
+            <param name="warningMessage">The warning returned with the response</param>
+            <param name="result">The result object</param>
+            <returns>The created response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response`1.Empty">
+            <summary>
+            Creates an empty result. The empty result is successful, but might have issues that should be addressed or logged
+            </summary>
+            <returns>The created response object</returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.Response">
+            <summary>
+            A simple response object with no returned object. Just indicates successful or failed requests
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:aux_oauth_server.service.Responses.Response"/> class. 
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response.HasResult">
+            <summary>
+            Indicates if the response contains a result
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response.ResponseData">
+            <summary>
+            The result of the response
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response.Successful">
+            <summary>
+            Indicates if the response is successful or not. Warning or success result type indicate success
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response.ResultType">
+            <summary>
+            The result type
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response.Message">
+            <summary>
+            The message returned with the response
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.Response.ValidationMessages">
+            <summary>
+            The validation error messages returned with the response
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response.Success">
+            <summary>
+            Creates a successful response with a given result object
+            </summary>
+            <returns>The response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response.Failed(System.String)">
+            <summary>
+            Creates a failed result. It takes no result object
+            </summary>
+            <param name="errorMessage">The error message returned with the response</param>
+            <returns>The created response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response.ValidationError(System.Collections.Generic.List{System.String})">
+            <summary>
+            Creates a validation error response, indicating the input was invalid
+            </summary>
+            <param name="validationMessages">The validation message</param>
+            <returns>The Response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response.Warning(System.String)">
+            <summary>
+            Creates a warning result. The warning result is successful, but might have issues that should be addressed or logged
+            </summary>
+            <param name="warningMessage">The warning returned with the response</param>
+            <returns>The created response object</returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Responses.Response.Empty">
+            <summary>
+            Creates an empty result. The empty result is successful, but might have issues that should be addressed or logged
+            </summary>
+            <returns>The created response object</returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.TokenResponse">
+            <summary>
+            Response send to client after success validation
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenResponse.IdToken">
+            <summary>
+            Id token
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenResponse.AccessToken">
+            <summary>
+            Access token
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenResponse.RefreshToken">
+            <summary>
+            Refresh token
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenResponse.UserInformation">
+            <summary>
+            User information
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Responses.TokenUserInformation">
+            <summary>
+            User information
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenUserInformation.FirstName">
+            <summary>
+            User name
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenUserInformation.LastName">
+            <summary>
+            User name
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenUserInformation.Email">
+            <summary>
+            User email
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenUserInformation.Role">
+            <summary>
+            user role
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Responses.TokenUserInformation.Permission">
+            <summary>
+             user permission
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.Services.IAuthorizationService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.IAuthorizationService.GetAccessTokenAsync(aux_oauth_server.service.ViewModels.TokenRequestViewModel)">
+            <summary>
+            Request access token from idp
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Services.AuthorizationService">
+            <summary>
+            Servvice that helps with authorization process like token request, refresh ton, token validation
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.AuthorizationService.#ctor(Microsoft.Extensions.Logging.ILogger{aux_oauth_server.service.Services.AuthorizationService},aux_oauth_server.service.Managers.ProviderManager,aux_oauth_server.service.DataAccess.Repositories.IRefreshTokenRepository)">
+            <summary>
+            Default constructor for the authorization service
+            </summary>
+            <param name="logger"></param>
+            <param name="providerManager"></param>
+            <param name="refreshTokenRespository"></param>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.AuthorizationService.GetAccessTokenAsync(aux_oauth_server.service.ViewModels.TokenRequestViewModel)">
+            <summary>
+            Get access token from client, process the refresh token, get basic information
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.AuthorizationService.ProcessToken(aux_oauth_server.service.Responses.ProviderTokenResponse,System.IdentityModel.Tokens.Jwt.JwtSecurityToken)">
+            <summary>
+            Process token
+            </summary>
+            <param name="response">Provider token response</param>
+            <param name="securityToken">Provider token deta</param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Services.BaseService`1">
+            <summary>
+            Base service
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.BaseService`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.BaseService`1.LogInformation(System.String,System.Object)">
+            <summary>
+            Log information
+            </summary>
+            <param name="message"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.BaseService`1.LogError(System.Exception,System.String)">
+            <summary>
+            Log error 
+            </summary>
+            <param name="ex"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:aux_oauth_server.service.Services.IProviderService">
+            <summary>
+            Provider service interface
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.IProviderService.GetProviderByClientId(System.String)">
+            <summary>
+            Get provider by client id
+            </summary>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.IProviderService.GetProviderById(System.String)">
+            <summary>
+            Get provider by id
+            </summary>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.IProviderService.GetProviderByName(System.String)">
+            <summary>
+            Get provider by name
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.IProviderService.GetProviders">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Services.ProviderService">
+            <summary>
+            Provider service, helps provider actions like get providers, add, update, delete
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.ProviderService.#ctor(Microsoft.Extensions.Logging.ILogger{aux_oauth_server.service.Services.ProviderService},aux_oauth_server.service.DataAccess.Repositories.IProviderRepository)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="providerRepository"></param>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.ProviderService.GetProviders">
+            <summary>
+            Get the providers from the db
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.ProviderService.GetProviderByName(System.String)">
+            <summary>
+            Get provider by name
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.ProviderService.GetProviderByClientId(System.String)">
+            <summary>
+            Get provider by client id
+            </summary>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.ProviderService.GetProviderById(System.String)">
+            <summary>
+            Get provider by client id
+            </summary>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Services.ProviderService.MapEntityToResponse(aux_oauth_server.service.DataAccess.Entities.ProviderEntity)">
+            <summary>
+            Helps map provider from entity to model
+            </summary>
+            <param name="providerEntity">Provider entityy from db or source</param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Utilities.HttpHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Utilities.HttpHelper.MakeApplicationWwwFormUrlencodedAsync``2(System.String,System.Object)">
+            <summary>
+            Help with make network request for request that has ApplicationWwwFormUrlencoded data
+            </summary>
+            <typeparam name="T">Data type for result</typeparam>
+            <typeparam name="U">Data type for error</typeparam>
+            <param name="url">Url</param>
+            <param name="data">post data</param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.Utilities.GC`2">
+            <summary>
+            Data context
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="U"></typeparam>
+        </member>
+        <member name="P:aux_oauth_server.service.Utilities.GC`2.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Utilities.GC`2.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.Utilities.GC`2.HasData">
+            <summary>
+            Check for data
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Utilities.GC`2.#ctor">
+            <summary>
+            Default
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.service.Utilities.GC`2.SetData(`0)">
+            <summary>
+            Set data for GC
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.service.Utilities.GC`2.SetError(`1)">
+            <summary>
+            Set error for GC
+            </summary>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.service.ViewModels.TokenRequestViewModel">
+            <summary>
+            View model for request for access token
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.ViewModels.TokenRequestViewModel.AuthorizationCode">
+            <summary>
+            Authorixation code from idp
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.ViewModels.TokenRequestViewModel.ClientId">
+            <summary>
+            Client id fo
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.ViewModels.TokenRequestViewModel.IdentityProvider">
+            <summary>
+            Idp used to generate the token, like Google
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.ViewModels.TokenRequestViewModel.TokenRequestType">
+            <summary>
+            Token request type
+            </summary>
+        </member>
+        <member name="P:aux_oauth_server.service.ViewModels.TokenRequestViewModel.RedirectUrl">
+            <summary>
+            Redirect url
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.service.ViewModels.TokenRequestType">
+            <summary>
+            Token request type : access token or refresh token
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.ViewModels.TokenRequestType.ACCESS_TOKEN">
+            <summary>
+            Access token type
+            </summary>
+        </member>
+        <member name="F:aux_oauth_server.service.ViewModels.TokenRequestType.REFRESH_TOKEN">
+            <summary>
+            Refresh token type
+            </summary>
+        </member>
+    </members>
+</doc>

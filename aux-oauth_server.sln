@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aux-oauth_server.api", "aux-oauth_server.api\aux-oauth_server.api.csproj", "{76CBD997-0BDB-4E5D-A13E-177A4D150794}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aux-oauth_server.service", "aux-oauth_server.service\aux-oauth_server.service.csproj", "{7B8A8438-3AF4-4144-95E1-14596FCF9491}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{B252A0F6-D3F4-436C-96AD-46C15315C59F}"
+	ProjectSection(SolutionItems) = preProject
+		1. create_provider_schema.sql = 1. create_provider_schema.sql
+		2. seed_providers.sql = 2. seed_providers.sql
+		3. create_token_schema.sql = 3. create_token_schema.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentation", "documentation", "{F962BF63-C590-4C3C-86E4-EDDC647838CF}"
+	ProjectSection(SolutionItems) = preProject
+		project.md = project.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76CBD997-0BDB-4E5D-A13E-177A4D150794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76CBD997-0BDB-4E5D-A13E-177A4D150794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76CBD997-0BDB-4E5D-A13E-177A4D150794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76CBD997-0BDB-4E5D-A13E-177A4D150794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B8A8438-3AF4-4144-95E1-14596FCF9491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8A8438-3AF4-4144-95E1-14596FCF9491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8A8438-3AF4-4144-95E1-14596FCF9491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8A8438-3AF4-4144-95E1-14596FCF9491}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1E14F9F-AAFA-4F93-A9BB-DCE3C9E3415F}
+	EndGlobalSection
+EndGlobal

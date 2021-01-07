@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>aux-oauth_server.api</name>
+    </assembly>
+    <members>
+        <member name="T:aux_oauth_server.api.Controllers.AuthorizationController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.AuthorizationController.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{aux_oauth_server.api.Controllers.AuthorizationController},aux_oauth_server.service.Services.IAuthorizationService)">
+            <summary>
+            Default authorization constructor
+            </summary>
+            <param name="provider"></param>
+            <param name="logger"></param>
+            <param name="authorizationService"></param>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.AuthorizationController.PostAsync(aux_oauth_server.service.ViewModels.TokenRequestViewModel)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:aux_oauth_server.api.Controllers.BaseApiController`1">
+            <summary>
+            Base controller for all api services
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:aux_oauth_server.api.Controllers.BaseApiController`1.provider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.BaseApiController`1.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{`0})">
+            <summary>
+            Base api controller default constructor
+            </summary>
+            <param name="provider"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.BaseApiController`1.LogError(System.Exception,System.String,System.String)">
+            <summary>
+            Helps to log errors
+            </summary>
+            <param name="ex"></param>
+            <param name="controller"></param>
+            <param name="method"></param>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.BaseApiController`1.LogRequest(System.Exception,System.String,System.String)">
+            <summary>
+            Helps to log errors
+            </summary>
+            <param name="ex"></param>
+            <param name="controller"></param>
+            <param name="method"></param>
+        </member>
+        <member name="T:aux_oauth_server.api.Controllers.ProvidersController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.ProvidersController.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{aux_oauth_server.api.Controllers.ProvidersController},aux_oauth_server.service.Services.IProviderService)">
+            <summary>
+            Provider default controller with logger and provider service
+            </summary>
+            <param name="provider"></param>
+            <param name="logger"></param>
+            <param name="providerService"></param>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.ProvidersController.Get">
+            <summary>
+            Resources to get list of providers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:aux_oauth_server.api.Controllers.ProvidersController.GetById(System.String)">
+            <summary>
+            Resources to get a provider
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.api.Middleware.RequestResponseLoggingMiddleware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Middleware.RequestResponseLoggingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="M:aux_oauth_server.api.Middleware.RequestResponseLoggingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.api.Middleware.RequestResponseLoggingMiddlewareExtensions">
+            <summary>
+            Request response extenxion
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Middleware.RequestResponseLoggingMiddlewareExtensions.UseRequestResponseLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Registers the middleware
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:aux_oauth_server.api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Create a host builder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:aux_oauth_server.api.Startup">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            /
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:aux_oauth_server.api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:aux_oauth_server.api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            /
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:aux_oauth_server.api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

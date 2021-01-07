@@ -1,0 +1,10 @@
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\bin\Debug\netcoreapp3.1\aux-oauth_server.service.deps.json
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\bin\Debug\netcoreapp3.1\aux-oauth_server.service.dll
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\bin\Debug\netcoreapp3.1\aux-oauth_server.service.pdb
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\bin\Debug\netcoreapp3.1\aux-oauth_server.service.xml
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\obj\Debug\netcoreapp3.1\aux-oauth_server.service.AssemblyInfoInputs.cache
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\obj\Debug\netcoreapp3.1\aux-oauth_server.service.AssemblyInfo.cs
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\obj\Debug\netcoreapp3.1\aux-oauth_server.service.csproj.CoreCompileInputs.cache
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\obj\Debug\netcoreapp3.1\aux-oauth_server.service.dll
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\obj\Debug\netcoreapp3.1\aux-oauth_server.service.pdb
+C:\Projects\servicess - project\aux-oauth_server\aux-oauth_server.service\obj\Debug\netcoreapp3.1\aux-oauth_server.service.csprojAssemblyReference.cache
